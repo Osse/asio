@@ -619,7 +619,7 @@
 #if !defined(ASIO_DISABLE_INLINE_CONSTEXPR_VARIABLES)
 # if defined(__CUDACC__)
 #  define ASIO_HAS_INLINE_CONSTEXPR_VARIABLES 1
-#  define ASIO_INLINE_CONSTEXPR inline constexpr __constant__
+#  define ASIO_INLINE_CONSTEXPR __constant__ inline constexpr
 # endif // defined(__CUDACC__)
 #endif // defined(ASIO_DISABLE_INLINE_CONSTEXPR_VARIABLES)
 
