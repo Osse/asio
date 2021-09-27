@@ -615,6 +615,13 @@
 # define ASIO_DEFAULT_ALIGN 1
 #endif // defined(ASIO_HAS_ALIGNOF)
 
+// Support for inline variables.
+#if !defined(ASIO_DISABLE_INLINE_VARIABLES)
+# if defined(__CUDACC__)
+#  define ASIO_HAS_INLINE_VARIABLES 1
+# endif // defined(__CUDACC__)
+#endif // defined(ASIO_DISABLE_INLINE_VARIABLES)
+
 // Standard library support for aligned allocation.
 #if !defined(ASIO_HAS_STD_ALIGNED_ALLOC)
 # if !defined(ASIO_DISABLE_STD_ALIGNED_ALLOC)
